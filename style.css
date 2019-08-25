@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300i,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: rgb(39, 37, 37);
+  /* background: radial-gradient(
+    2033.16px at 96.3% 4.72%,
+    #fbc53b 0%,
+    #da2c37 100%
+  ); */
+
+  background: radial-gradient(
+    2033.16px at 96.3% 4.72%,
+    #f6b716 0%,
+    #e2762c 50.83%,
+    #d33a44 100%
+  );
+}
+/* sizing the main calculator container */
+.cal-container {
+  position: absolute;
+  top: 7.5vh;
+  left: 37%;
+  width: 25%;
+  height: 85vh;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 30px;
+  transform: rotate(-0.07deg);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.cal-top {
+  width: 100%;
+  height: 40%;
+}
+.text-container {
+  position: absolute;
+  top: 15%;
+  left: 14%;
+  margin-right: 6%;
+}
+.text-container input {
+  text-align-last: right;
+  text-align: start;
+  width: 95%;
+  border: none;
+}
+.sum-text input {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+.text-for-sum input {
+  font-size: 24px;
+  color: #555add;
+}
+
+.cal-body {
+  position: absolute;
+  /* background-color: #da2c37; */
+  width: 100%;
+  height: 55%;
+  top: 40%;
+  bottom: 5%;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+/* styling all the buttons */
+.row input {
+  cursor: pointer;
+  height: 63px;
+  width: 63px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  outline: none;
+}
+/* animation for buttons when hover */
+.row input:hover {
+  animation: text 0.5s ease-in-out 2 alternate;
+}
+
+/* click effect when the button is clicked */
+.row input:active {
+  transform: translateY(2px);
+}
+/* making the button with operators round */
+.row .operator {
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  text-align: center;
+  height: 55px;
+  width: 55px;
+  margin: 4px 0;
+}
+/* styling the button with equals sign */
+.row .equals {
+  background-color: #9586f1;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  height: 55px;
+  width: 55px;
+  margin: 4px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .cal-container {
+    top: 5%;
+    height: 90%;
+    width: 90%;
+    left: 0;
+    margin: 5%;
+  }
+}
+/* footer design */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0.5%;
+  text-align: center;
+}
+
+/* animation for the buttons */
+@keyframes text {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

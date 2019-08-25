@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main class="cal-container">
+      <!-- calculator head -->
+      <div class="cal-top">
+        <div class="text-container">
+          <div class="sum-text">
+            <input
+              type="text"
+              placeholder="0"
+              id="sum-tf"
+              readonly
+              disabled
+              style="background: white"
+            />
+          </div>
+          <div class="text-for-sum">
+            <input
+              type="text"
+              placeholder="2-2"
+              id="sum-input-tf"
+              readonly
+              disabled
+              style="background: white"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- calculator body -->
+      <div class="cal-body">
+        <div class="row row-1">
+          <input
+            type="button"
+            style="color:#555ADD;"
+            value="AC"
+            onclick="clearscreen()"
+          />
+          <input type="button" value="(" onclick="disp('\(')" />
+          <input type="button" value=")" onclick="disp('\)')" />
+          <input
+            type="button"
+            class="operator"
+            value="&divide;"
+            onclick="disp('/')"
+          />
+          <!-- <input style="color:#555ADD;">AC</button>
+          <button>+/-</button>
+          <button>%</button>
+          <button class="operator">&divide;</button> -->
+        </div>
+        <div class="row row-2">
+          <input type="button" value="7" onclick="disp(7)" />
+          <input type="button" value="8" onclick="disp(8)" />
+          <input type="button" value="9" onclick="disp(9)" />
+          <input type="button" class="operator" value="*" onclick="disp('*')" />
+          <!-- <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="operator">*</button> -->
+        </div>
+        <div class="row row-3">
+          <input type="button" value="4" onclick="disp(4)" />
+          <input type="button" value="5" onclick="disp(5)" />
+          <input type="button" value="6" onclick="disp(6)" />
+          <input type="button" class="operator" value="-" onclick="disp('-')" />
+          <!-- <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="operator">-</button> -->
+        </div>
+        <div class="row row-4">
+          <input type="button" value="1" onclick="disp(1)" />
+          <input type="button" value="2" onclick="disp(2)" />
+          <input type="button" value="3" onclick="disp(3)" />
+          <input type="button" class="operator" value="+" onclick="disp('+')" />
+          <!-- <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="operator">+</button> -->
+        </div>
+        <div class="row row-5">
+          <input type="button" value="0" onclick="disp(0)" />
+          <input type="button" value="." onclick="disp('.')" />
+          <!-- <input type="button" style="cursor: default;" value="" disabled /> -->
+          <input type="button" value="Del" onclick="remove()" />
+          <input
+            type="button"
+            class="equals"
+            value="="
+            onclick="calculateValue()"
+          />
+          <!-- <button>0</button>
+          <button>.</button>
+          <button disabled style="cursor: default;"></button>
+          <button class="equals">=</button> -->
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="#">Developed by Abhishek dm</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
